@@ -1,4 +1,4 @@
-in the base b the largest number without repeated digits is the number with starting with b-1 ending with 1
+in the base b the largest number without repeated digits is the number with starting with b-1 ending with 0
 
-i.e. in base 8 would be 7654321
+i.e. in base 8 would be 76543210
 
