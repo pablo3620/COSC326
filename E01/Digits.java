@@ -38,6 +38,13 @@ public class Digits {
                 System.out.println(maxRepLocation + " " + maxRepeat);
                 break;
             case 'b':
+                boolean exit = true;
+                for (int i = 1; exit; i++) {
+                    if (checkRepeated(i, b) && checkRepeated(i, c)) {
+                        System.out.println(i);
+                        exit = false;
+                    }
+                }
                 break;
         }
 
