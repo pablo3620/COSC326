@@ -8,21 +8,22 @@ public class Digits {
         while (scan.hasNextLine()) {
             String input = scan.nextLine();
 
-            char a = ' ';
+            String a = "";
             int b = 0, c = 0;
             Scanner tokens = new Scanner(input);
             try {
-                a = tokens.next().toLowerCase().charAt(0);
+                a = tokens.next();
                 b = tokens.nextInt();
                 c = tokens.nextInt();
                 tokens.close();
-                if (a != 'a' && a != 'b')
+                if (!a.equals("A") && !a.equals("B"))
                     throw new Exception();
             } catch (Exception e) {
                 System.out.println("Bad line: " + input);
+
             }
             switch (a) {
-                case 'a':
+                case "A":
                     int repeatedCount = 0;
                     int maxRepeat = 0;
                     int maxRepLocation = 0;
@@ -39,7 +40,7 @@ public class Digits {
                     }
                     System.out.println(maxRepLocation + " " + maxRepeat);
                     break;
-                case 'b':
+                case "B":
                     boolean exit = true;
                     for (int i = 1; exit; i++) {
                         if (checkRepeated(i, b) && checkRepeated(i, c)) {
