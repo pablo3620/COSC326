@@ -33,12 +33,16 @@ def process_tokens():
         hemi_form(float(tokens.pop(0)), tokens.pop(0),
                     float(tokens.pop(0)), tokens.pop(0))
         return
+    # format is numhem numhem (standard form with hemisphere no spaces)
     if re.fullmatch(r'[0-9]+\.?[0-9]*?[NSEW]', tokens[0]) and re.fullmatch(r'[0-9]+\.?[0-9]*?[NSEW]', tokens[1]):
         n1 = re.findall(r'[0-9]+\.?[0-9]*|[NSEW]', tokens.pop(0))
         n2 = re.findall(r'[0-9]+\.?[0-9]*|[NSEW]', tokens.pop(0))
         print(n1, n2)
         hemi_form(float(n1[0]), n1[1], float(n2[0]), n2[1])
         return
+    # degress and decimal minutes form with spaces
+    if re.fullmatch(r'[0-9]+', tokens[0]) and re.fullmatch(r'[\°d]', tokens[1]) and re.fullmatch(r'[0-9]+\.?[0-9]*',tokens[2])
+
 
     print("end of process_tokens")
 
