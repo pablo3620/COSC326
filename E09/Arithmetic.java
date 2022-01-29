@@ -35,6 +35,7 @@ public class Arithmetic {
                 ops[0] = '=';
                 // Arithmetic arith = new Arithmetic();
                 if (findAnswer(2, nums[1], nums[1])) {
+                    System.out.print(line.substring(0, 2));
                     for (int i = 0; i < ops.length; i++) {
                         System.out.print(nums[i] + " ");
                         System.out.print(ops[i] + " ");

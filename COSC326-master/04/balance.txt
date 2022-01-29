@@ -1,7 +1,0 @@
-aaa
-abb
-abc
-bab
-bbb
-cbc
-ccc
