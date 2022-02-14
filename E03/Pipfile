@@ -5,9 +5,11 @@ name = "pypi"
 
 [packages]
 numpy = "*"
+geojson = "*"
+flake8 = "*"
+autopep8 = "*"
 
 [dev-packages]
-pylint = "*"
 autopep8 = "*"
 
 [requires]

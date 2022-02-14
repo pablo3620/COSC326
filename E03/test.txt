@@ -1,0 +1,5 @@
+40 20 this is a comment
+30 -40
+40S 20W
+40 W 30 S comments are stuipd
+23 d 45 m 2 s N, 15 d 20 m 3 s W

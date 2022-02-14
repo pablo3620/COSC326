@@ -39,7 +39,7 @@ layerCount = len(scales)
 drawStack = [[] for i in range(layerCount)]
 
 
-with cairo.SVGSurface("quilti5.svg", MIDDLE*2, MIDDLE*2) as surface:
+with cairo.SVGSurface("quilt.svg", MIDDLE*2, MIDDLE*2) as surface:
     scales[:]  = [i / (sum(scales)*1.1) for i in scales]
     # print(scales)
     context = cairo.Context(surface)
