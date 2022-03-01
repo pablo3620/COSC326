@@ -7,6 +7,4 @@
 .Rhistory
 .RData
 *.tmp
-/cosc326-group
-/COSC326-E06-carpets
-/E02-Rollin
+*.class
