@@ -1,0 +1,69 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch pabloCarpet",
+            "request": "launch",
+            "mainClass": "pabloCarpet",
+            "projectName": "E06-carpets_8773215c"
+        },
+        {
+            "type": "java",
+            "name": "no matches",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "16",
+                "-n",
+                "<",
+                "${workspaceFolder}/test.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "max matches",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "18",
+                "-m",
+                "<",
+                "${workspaceFolder}/test.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "max matches small test",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "10",
+                "-m",
+                "<",
+                "${workspaceFolder}/small_test.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "bal matches",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "19",
+                "-b",
+                "<",
+                "${workspaceFolder}/test.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
