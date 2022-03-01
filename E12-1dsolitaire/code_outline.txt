@@ -1,0 +1,35 @@
+// Representing positions as String
+// Use StringBuilder to construct 'children'
+
+public HashSet<String> children(String s) {
+  HashSet<String> result = new HashSet<>();
+  // Create a stringbuilder copy of s with oo added at the front
+  // and end
+  // Scan it for oox or xoo
+  // Each time you find one build a new Stringbuilder where that's replaced
+  // by xxo or oxx respectively
+  // Trim leading and trailing o's off that
+  // Add that to 'result'
+  // (actually, compare 'that' and its reverse and add the smaller)  
+  return result;
+}
+
+HashSet<String> currentGeneration ...
+
+// In a loop
+HashSet<String> nextGeneration = new HashSet<String>();
+for(String s : currentGeneration) {
+  nextGeneration.addAll(children(s));
+}
+currentGeneration = nextGeneration
+
+// Non-destructive reverse
+
+StringBuilder a = new StringBuilder("Happy");
+StringBuilder ra = new StringBuilder(a);
+ra.reverse();
+if (a.compareTo(ra) < 0) {
+  result.add(a.toString());
+} else {
+  result.add(ra.toString());
+}

@@ -1,0 +1,84 @@
+public class OneDSolitarie {
+    Hole leftmost;
+    Hole rightmost;
+
+    public static void main(String[] args) {
+        OneDSolitarie board = new OneDSolitarie();
+        OneDSolitarie copy_board = new OneDSolitarie(board);
+        board.print();
+        copy_board.print();
+
+    }
+
+    OneDSolitarie() { 
+        Hole center = new Hole();
+        center.pinned = true;
+
+        leftmost = center.createLeft();
+        rightmost = center.createRight();
+
+
+        leftmost = center.left;
+        rightmost = center.right;
+    }
+
+    OneDSolitarie(OneDSolitarie toCopy) {
+        Hole current, currentTocopy;
+        
+        current = new Hole();
+        leftmost = current;
+
+        currentTocopy = toCopy.leftmost;
+
+        System.out.println("yes it is copying"); 
+
+        while (currentTocopy.right != null) {
+            current.pinned = currentTocopy.pinned;
+            current = current.createRight();
+            currentTocopy = currentTocopy.right;
+        } 
+
+        rightmost = current;
+
+
+    }
+
+    void print() {
+        System.out.println("");
+        Hole current = leftmost;
+        do {
+            if (current.pinned) {
+                System.out.print("1, ");
+            } else {
+                System.out.print("0, ");
+            }
+
+            current = current.right;
+        } while (current != null);
+        System.out.println("");
+    }
+
+
+
+   class Hole{
+        boolean pinned;
+
+        Hole left;
+
+        Hole right;
+
+        Hole() {}
+
+        Hole createLeft() {
+            left = new Hole();
+            left.right = this;
+            return left;
+        }
+
+        Hole createRight() {
+            right = new Hole();
+            right.left = this;
+            return right;
+        }
+    }
+}
